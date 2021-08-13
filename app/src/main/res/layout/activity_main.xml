@@ -1,18 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/mybutton"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="50dp"
+        android:text="Button"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:id="@+id/textview_layout"
+        android:layout_below="@id/mybutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="这是文本1" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="这是文本2" />
+    </LinearLayout>
+
+    <com.guojun.guojundemo.view.CustomView1
+        android:id="@+id/myView"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/textview_layout"
+        android:layout_width="600px"
+        android:layout_height="500px"
+        />
+
+</RelativeLayout>
